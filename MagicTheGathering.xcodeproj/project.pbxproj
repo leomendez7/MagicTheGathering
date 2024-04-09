@@ -25,6 +25,7 @@
 		16830EEF2BC586FE0023C1EB /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		16830EF02BC587340023C1EB /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Presentation; sourceTree = "<group>"; };
 		16830EF12BC587E30023C1EB /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared; sourceTree = "<group>"; };
+		16830EFB2BC5CF310023C1EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		16830EDD2BC584440023C1EB /* MagicTheGathering */ = {
 			isa = PBXGroup;
 			children = (
+				16830EFB2BC5CF310023C1EB /* Info.plist */,
 				16830EDE2BC584440023C1EB /* MagicTheGatheringApp.swift */,
 				16830EE22BC584470023C1EB /* Assets.xcassets */,
 				16830EE42BC584470023C1EB /* Preview Content */,
@@ -309,6 +311,7 @@
 				DEVELOPMENT_TEAM = 5MRQMG4R3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MagicTheGathering/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +342,7 @@
 				DEVELOPMENT_TEAM = 5MRQMG4R3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MagicTheGathering/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

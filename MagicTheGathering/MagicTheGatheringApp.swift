@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Presentation
+import Domain
 
 @main
 struct MagicTheGatheringApp: App {
@@ -16,6 +17,7 @@ struct MagicTheGatheringApp: App {
     var body: some Scene {
         WindowGroup {
             PresentationView()
+                .environmentObject(Store.storeDefault)
         }
     }
 }

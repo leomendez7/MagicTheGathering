@@ -10,7 +10,6 @@ import Alamofire
 
 /// Syntax Sugar for most common HTTP methods
 
-@available(iOS 13, *)
 public actor APIClient {
     
     private var server: APIServer

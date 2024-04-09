@@ -11,11 +11,12 @@ public enum Colors {
     
     case neutral
     case black
+    case black2
     case blue
     case gray
+    case lightGray
     case custom(hex: UInt, alpha: Double?)
     
-    @available(iOS 13.0, *)
     var colorValue: Color {
         switch self {
         case .neutral:
@@ -24,11 +25,17 @@ public enum Colors {
         case .black:
             return Color("black", bundle: .module)
             
+        case .black2:
+            return Color("black-2", bundle: .module)
+            
         case .blue:
             return Color("blue", bundle: .module)
             
         case .gray:
             return Color("gray", bundle: .module)
+            
+        case .lightGray:
+            return Color("light-gray", bundle: .module)
             
         case .custom(let hex, let alpha):
             return Color(hex: hex, alpha: alpha ?? 1.0)
@@ -38,7 +45,6 @@ public enum Colors {
     
 }
 
-@available(iOS 13.0, *)
 extension Color {
     public init(named: Colors) {
         self = named.colorValue

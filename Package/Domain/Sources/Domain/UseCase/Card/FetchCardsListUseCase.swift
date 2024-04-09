@@ -7,16 +7,16 @@
 
 import Foundation
 
-public class FetchListCardsUseCase: UseCaseProtocol {
+public class FetchCardsListUseCase: UseCaseProtocol {
     
-    let repository: FetchListCardsRepositoryProtocol
+    let repository: FetchCardsListRepositoryProtocol
     
-    public init(repository: FetchListCardsRepositoryProtocol) {
+    public init(repository: FetchCardsListRepositoryProtocol) {
         self.repository = repository
     }
     
     public func execute(requestValue: String) async throws -> [Card] {
-        return try await repository.fetchListCards()
+        return try await repository.fetchCardsList()
     }
     
 }

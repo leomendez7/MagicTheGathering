@@ -7,8 +7,8 @@
 
 import Foundation
 
-public protocol FetchListCardsRepositoryProtocol {
+public protocol FetchCardsListRepositoryProtocol {
     
-    func fetchListCards() async throws -> [Card]
+    func fetchCardsList() async throws -> [Card]
     
 }

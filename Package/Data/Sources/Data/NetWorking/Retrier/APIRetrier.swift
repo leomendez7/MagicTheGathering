@@ -10,7 +10,6 @@ import Alamofire
 import Domain
 import Shared
 
-@available(iOS 13, *)
 public struct APIRetrier: RequestRetrier {
     
     private let lock = NSLock()

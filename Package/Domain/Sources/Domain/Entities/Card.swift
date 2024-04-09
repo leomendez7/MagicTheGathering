@@ -12,7 +12,8 @@ public struct CardData: Codable {
 }
 
 // MARK: - Card
-public struct Card: Codable {
+public struct Card: Codable, Identifiable {
+    
     public let name, manaCost: String
     public let cmc: Int
     public let colors, colorIdentity: [Color]
@@ -36,7 +37,7 @@ public struct Card: Codable {
     public let flavor: String?
     public let rulings: [Ruling]?
     public let supertypes: [String]?
-
+    
     enum CodingKeys: String, CodingKey {
         case name, manaCost, cmc, colors, colorIdentity, type, types, subtypes, rarity
         case cardSet = "set"

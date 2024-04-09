@@ -44,7 +44,6 @@ public enum FontManager: String, CaseIterable {
     }
 }
 
-@available(iOS 13.0, *)
 extension View {
     
     public func typography(custom font: FontManager, size: CGFloat) -> some View {
