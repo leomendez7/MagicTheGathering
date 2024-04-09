@@ -21,6 +21,7 @@
 		16830EE52BC584470023C1EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		16830EEE2BC586AE0023C1EB /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
 		16830EEF2BC586FE0023C1EB /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
+		16830EF02BC587340023C1EB /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Presentation; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 		16830EEC2BC5851B0023C1EB /* Package */ = {
 			isa = PBXGroup;
 			children = (
+				16830EF02BC587340023C1EB /* Presentation */,
 				16830EEF2BC586FE0023C1EB /* Domain */,
 				16830EEE2BC586AE0023C1EB /* Data */,
 			);
