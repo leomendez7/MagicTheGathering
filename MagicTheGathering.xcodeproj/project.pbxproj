@@ -11,6 +11,10 @@
 		16830EE12BC584440023C1EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16830EE02BC584440023C1EB /* ContentView.swift */; };
 		16830EE32BC584470023C1EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16830EE22BC584470023C1EB /* Assets.xcassets */; };
 		16830EE62BC584470023C1EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16830EE52BC584470023C1EB /* Preview Assets.xcassets */; };
+		16830EF42BC588130023C1EB /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF32BC588130023C1EB /* Data */; };
+		16830EF62BC588130023C1EB /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF52BC588130023C1EB /* Domain */; };
+		16830EF82BC588130023C1EB /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF72BC588130023C1EB /* Presentation */; };
+		16830EFA2BC588130023C1EB /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF92BC588130023C1EB /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16830EF62BC588130023C1EB /* Domain in Frameworks */,
+				16830EFA2BC588130023C1EB /* Shared in Frameworks */,
+				16830EF82BC588130023C1EB /* Presentation in Frameworks */,
+				16830EF42BC588130023C1EB /* Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 				16830EEC2BC5851B0023C1EB /* Package */,
 				16830EDD2BC584440023C1EB /* MagicTheGathering */,
 				16830EDC2BC584440023C1EB /* Products */,
+				16830EF22BC588130023C1EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +92,13 @@
 			path = Package;
 			sourceTree = "<group>";
 		};
+		16830EF22BC588130023C1EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,6 +115,12 @@
 			dependencies = (
 			);
 			name = MagicTheGathering;
+			packageProductDependencies = (
+				16830EF32BC588130023C1EB /* Data */,
+				16830EF52BC588130023C1EB /* Domain */,
+				16830EF72BC588130023C1EB /* Presentation */,
+				16830EF92BC588130023C1EB /* Shared */,
+			);
 			productName = MagicTheGathering;
 			productReference = 16830EDB2BC584440023C1EB /* MagicTheGathering.app */;
 			productType = "com.apple.product-type.application";
@@ -360,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16830EF32BC588130023C1EB /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		16830EF52BC588130023C1EB /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		16830EF72BC588130023C1EB /* Presentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Presentation;
+		};
+		16830EF92BC588130023C1EB /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shared;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16830ED32BC584440023C1EB /* Project object */;
 }

@@ -11,11 +11,15 @@ let package = Package(
             name: "Data",
             targets: ["Data"]),
     ],
+    dependencies: [
+        .package(path: "../Domain"),
+        .package(path: "../Shared"),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.2"),
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Data"),
+            name: "Data",
+            dependencies: ["Domain", "Shared", "Alamofire"]),
         .testTarget(
             name: "DataTests",
             dependencies: ["Data"]),
