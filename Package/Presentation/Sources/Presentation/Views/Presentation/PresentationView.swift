@@ -9,7 +9,12 @@ import SwiftUI
 
 public struct PresentationView: View {
     
-    @State private var isSheetPresented: Bool = false
+    @State public var isSheetPresented: Bool = false
+    
+    public var isSheetPresentedValue: Bool {
+        get { isSheetPresented }
+        set { isSheetPresented = newValue }
+    }
     
     public init(){ }
     
@@ -59,7 +64,6 @@ public struct PresentationView: View {
     
 }
 
-@available(iOS 13.0.0, *)
 #Preview {
     PresentationView()
 }

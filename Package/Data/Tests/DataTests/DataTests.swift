@@ -1,5 +1,7 @@
 import XCTest
+import Alamofire
 @testable import Data
+@testable import Domain
 
 final class DataTests: XCTestCase {
     func testExample() throws {

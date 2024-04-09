@@ -17,14 +17,25 @@ struct CardDetailsView: View {
     @State var text: String
     
     var body: some View {
-        VStack {
-            KFImage.url(URL(string: imageURL)).placeholder {
-                Rectangle()
-                    .fill(Color(named: .black))
-                    .frame(width: 135, height: 150)
+        ScrollView {
+            VStack(spacing: 10) {
+                KFImage.url(URL(string: imageURL)).placeholder {
+                    Rectangle()
+                        .fill(Color(named: .black))
+                        .frame(width: 135, height: 150)
+                }
+                Text(name)
+                    .typography(custom: FontManager.bold, size: 25)
+                    .foregroundColor(fromAssets: .black2)
+                VStack(alignment: .trailing) {
+                    Text(text)
+                        .typography(custom: FontManager.book, size: 20)
+                        .foregroundColor(fromAssets: .black2)
+                }
+                Spacer()
             }
-            .resizable()
-            .frame(width: 135, height: 150)
+            .padding(.top, 15)
+            .padding(.horizontal, 25)
         }
         .navigationTitle("Details")
         .navigationBarTitleDisplayMode(.inline)

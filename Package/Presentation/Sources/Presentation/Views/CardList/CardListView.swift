@@ -54,7 +54,6 @@ struct CardListView: View {
     
 }
 
-@available(iOS 13.0, *)
 #Preview {
     CardListView(viewModel: Constants.cardListViewModel)
         .environmentObject(Store())

@@ -30,9 +30,8 @@ public class FetchCardsListDataSource: FetchCardsListRepositoryProtocol {
         switch result {
         case .success(let response):
             AppLogger.debug(response.convertToJSON())
-            let cardData = response.cards
             Default.save(cardData: response)
-            return cardData
+            return response.cards
         case .failure(let error):
             AppLogger.error(error.localizedDescription, context: error)
             throw error
