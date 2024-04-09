@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Presentation
 
 @main
 struct MagicTheGatheringApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PresentationView()
         }
     }
 }

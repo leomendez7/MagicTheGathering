@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		16830EDF2BC584440023C1EB /* MagicTheGatheringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16830EDE2BC584440023C1EB /* MagicTheGatheringApp.swift */; };
-		16830EE12BC584440023C1EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16830EE02BC584440023C1EB /* ContentView.swift */; };
 		16830EE32BC584470023C1EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16830EE22BC584470023C1EB /* Assets.xcassets */; };
 		16830EE62BC584470023C1EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16830EE52BC584470023C1EB /* Preview Assets.xcassets */; };
 		16830EF42BC588130023C1EB /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF32BC588130023C1EB /* Data */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		16830EDB2BC584440023C1EB /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16830EDE2BC584440023C1EB /* MagicTheGatheringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicTheGatheringApp.swift; sourceTree = "<group>"; };
-		16830EE02BC584440023C1EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		16830EE22BC584470023C1EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16830EE52BC584470023C1EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		16830EEE2BC586AE0023C1EB /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				16830EDE2BC584440023C1EB /* MagicTheGatheringApp.swift */,
-				16830EE02BC584440023C1EB /* ContentView.swift */,
 				16830EE22BC584470023C1EB /* Assets.xcassets */,
 				16830EE42BC584470023C1EB /* Preview Content */,
 			);
@@ -175,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16830EE12BC584440023C1EB /* ContentView.swift in Sources */,
 				16830EDF2BC584440023C1EB /* MagicTheGatheringApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +314,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +344,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
