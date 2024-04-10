@@ -19,7 +19,7 @@ struct CardListView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     ForEach(viewModel.cards.indices, id: \.self) { index in
-                        CardCellView(name: viewModel.cards[index].name, imageUrl: viewModel.cards[index].imageURL ?? "")
+                        CardCellView(name: viewModel.cards[index].name, type: viewModel.cards[index].type, imageUrl: viewModel.cards[index].imageURL ?? "")
                             .padding(.horizontal, 16)
                             .onTapGesture {
                                 selectedCard = viewModel.cards[index]
@@ -27,6 +27,7 @@ struct CardListView: View {
                             }
                     }
                 }
+                .padding(.top, 20)
                 .navigationDestination(for: String.self,
                                        destination: {
                     route in
@@ -35,7 +36,7 @@ struct CardListView: View {
                         CardDetailsView(
                             imageURL: selectedCard?.imageURL ?? "",
                             name: selectedCard?.name ?? "",
-                            text: selectedCard?.text ?? ""
+                            text: selectedCard?.originalText ?? ""
                         )
                     default:
                         EmptyView()
@@ -44,10 +45,34 @@ struct CardListView: View {
             }
             .navigationTitle("List of Cards")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                let defaults = UserDefaults.standard
+                defaults.removeObject(forKey: Default.Key.cards.rawValue)
+                Task {
+                    await viewModel.fetchCards()
+                }
+            }) {
+                Image(systemName: "arrow.clockwise")
+                    .foregroundColor(Color(named: .black))
+                    .imageScale(.large)
+            }
+            )
             .onAppear {
                 Task {
                     await viewModel.fetchCards()
                 }
+            }
+            .alert(isPresented: $viewModel.isrequestError) {
+                Alert(
+                    title: Text("Error!"),
+                    message: Text("An error has occurred please try again."),
+                    primaryButton: .default(Text("Retry"), action: {
+                        Task {
+                            await viewModel.fetchCards()
+                        }
+                    }), secondaryButton: .cancel()
+                )
             }
         }
     }

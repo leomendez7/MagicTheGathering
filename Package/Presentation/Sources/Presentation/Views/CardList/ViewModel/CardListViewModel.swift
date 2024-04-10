@@ -12,6 +12,7 @@ public class CardsListViewModel: BaseViewModel<FetchCardsListUseCase>, Observabl
     
     var store: Store
     @Published var cards: [Card] = []
+    @Published var isrequestError: Bool = false
     
     public init(useCase: FetchCardsListUseCase, store: Store) {
         self.store = store
@@ -37,6 +38,9 @@ public class CardsListViewModel: BaseViewModel<FetchCardsListUseCase>, Observabl
                 }
             }
         } catch {
+            DispatchQueue.main.async {
+                self.isrequestError.toggle()
+            }
             print(error.localizedDescription)
         }
     }

@@ -1,7 +1,4 @@
 import XCTest
-import SwiftUI
-import ViewInspector
-import Kingfisher
 @testable import Presentation
 
 final class PresentationTests: XCTestCase {

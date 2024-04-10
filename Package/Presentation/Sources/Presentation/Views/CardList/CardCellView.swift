@@ -11,21 +11,31 @@ import Kingfisher
 struct CardCellView: View {
     
     @State var name: String
+    @State var type: String
     @State var imageUrl: String
     
     var body: some View {
         HStack {
-            KFImage.url(URL(string: imageUrl)).placeholder {
-                Rectangle()
-                    .fill(Color(named: .black))
-                    .frame(width: 35, height: 50)
+            KFImage.url(URL(string: imageUrl)).placeholder { progress in
+                if imageUrl.isEmpty {
+                    Rectangle()
+                        .fill(Color(named: .black))
+                        .frame(width: 35, height: 50)
+                } else {
+                    ProgressView()
+                }
             }
             .resizable()
             .frame(width: 35, height: 50)
             HStack {
-                Text(name)
-                    .typography(custom: FontManager.book, size: 20)
-                    .foregroundColor(fromAssets: .black2)
+                VStack(alignment: .leading) {
+                    Text(name)
+                        .typography(custom: FontManager.book, size: 20)
+                        .foregroundColor(fromAssets: .black2)
+                    Text(type)
+                        .typography(custom: FontManager.book, size: 13)
+                        .foregroundColor(fromAssets: .black2)
+                }
                 Spacer()
             }
         }
@@ -39,5 +49,5 @@ struct CardCellView: View {
 }
 
 #Preview {
-    CardCellView(name: "Ancestor's Chosen", imageUrl: "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card")
+    CardCellView(name: "Ancestor's Chosen", type: "Creature — Human Cleric", imageUrl: "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=130550&type=card")
 }
