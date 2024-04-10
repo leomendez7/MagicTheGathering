@@ -36,7 +36,7 @@ struct CardListView: View {
                         CardDetailsView(
                             imageURL: selectedCard?.imageURL ?? "",
                             name: selectedCard?.name ?? "",
-                            text: selectedCard?.originalText ?? ""
+                            text: selectedCard?.originalText ?? selectedCard?.text ?? ""
                         )
                     default:
                         EmptyView()

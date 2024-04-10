@@ -19,7 +19,7 @@ struct CardCellView: View {
             KFImage.url(URL(string: imageUrl)).placeholder { progress in
                 if imageUrl.isEmpty {
                     Rectangle()
-                        .fill(Color(named: .black))
+                        .fill(Color(named: .black2))
                         .frame(width: 35, height: 50)
                 } else {
                     ProgressView()

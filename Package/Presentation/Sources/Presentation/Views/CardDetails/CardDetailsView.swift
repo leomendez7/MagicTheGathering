@@ -22,7 +22,7 @@ struct CardDetailsView: View {
                 KFImage.url(URL(string: imageURL)).placeholder {
                     Rectangle()
                         .fill(Color(named: .black))
-                        .frame(width: 135, height: 150)
+                        .frame(width: 220, height: 300)
                 }
                 Text(name)
                     .typography(custom: FontManager.bold, size: 25)
