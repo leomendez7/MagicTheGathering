@@ -23,7 +23,7 @@ public class FetchCardsListDataSource: FetchCardsListRepositoryProtocol {
         self.apiClient = apiClient
     }
     
-    public func fetchCardsList() async throws -> [Domain.Card] {
+    public func fetchCardsList() async throws -> [Card] {
         let path = "cards"
         let response: DataResponse<CardData, AFError> = await apiClient.get(path)
         let result = response.result
