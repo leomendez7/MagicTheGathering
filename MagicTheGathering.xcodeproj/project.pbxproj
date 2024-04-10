@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		16830EDF2BC584440023C1EB /* MagicTheGatheringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16830EDE2BC584440023C1EB /* MagicTheGatheringApp.swift */; };
-		16830EE12BC584440023C1EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16830EE02BC584440023C1EB /* ContentView.swift */; };
 		16830EE32BC584470023C1EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16830EE22BC584470023C1EB /* Assets.xcassets */; };
 		16830EE62BC584470023C1EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16830EE52BC584470023C1EB /* Preview Assets.xcassets */; };
+		16830EF42BC588130023C1EB /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF32BC588130023C1EB /* Data */; };
+		16830EF62BC588130023C1EB /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF52BC588130023C1EB /* Domain */; };
+		16830EF82BC588130023C1EB /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF72BC588130023C1EB /* Presentation */; };
+		16830EFA2BC588130023C1EB /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 16830EF92BC588130023C1EB /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16830EDB2BC584440023C1EB /* MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTheGathering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16830EDE2BC584440023C1EB /* MagicTheGatheringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicTheGatheringApp.swift; sourceTree = "<group>"; };
-		16830EE02BC584440023C1EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		16830EE22BC584470023C1EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16830EE52BC584470023C1EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16830EEE2BC586AE0023C1EB /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
+		16830EEF2BC586FE0023C1EB /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
+		16830EF02BC587340023C1EB /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Presentation; sourceTree = "<group>"; };
+		16830EF12BC587E30023C1EB /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared; sourceTree = "<group>"; };
+		16830EFB2BC5CF310023C1EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16830EF62BC588130023C1EB /* Domain in Frameworks */,
+				16830EFA2BC588130023C1EB /* Shared in Frameworks */,
+				16830EF82BC588130023C1EB /* Presentation in Frameworks */,
+				16830EF42BC588130023C1EB /* Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +49,7 @@
 				16830EEC2BC5851B0023C1EB /* Package */,
 				16830EDD2BC584440023C1EB /* MagicTheGathering */,
 				16830EDC2BC584440023C1EB /* Products */,
+				16830EF22BC588130023C1EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +64,8 @@
 		16830EDD2BC584440023C1EB /* MagicTheGathering */ = {
 			isa = PBXGroup;
 			children = (
+				16830EFB2BC5CF310023C1EB /* Info.plist */,
 				16830EDE2BC584440023C1EB /* MagicTheGatheringApp.swift */,
-				16830EE02BC584440023C1EB /* ContentView.swift */,
 				16830EE22BC584470023C1EB /* Assets.xcassets */,
 				16830EE42BC584470023C1EB /* Preview Content */,
 			);
@@ -71,8 +83,19 @@
 		16830EEC2BC5851B0023C1EB /* Package */ = {
 			isa = PBXGroup;
 			children = (
+				16830EEE2BC586AE0023C1EB /* Data */,
+				16830EEF2BC586FE0023C1EB /* Domain */,
+				16830EF02BC587340023C1EB /* Presentation */,
+				16830EF12BC587E30023C1EB /* Shared */,
 			);
 			path = Package;
+			sourceTree = "<group>";
+		};
+		16830EF22BC588130023C1EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +114,12 @@
 			dependencies = (
 			);
 			name = MagicTheGathering;
+			packageProductDependencies = (
+				16830EF32BC588130023C1EB /* Data */,
+				16830EF52BC588130023C1EB /* Domain */,
+				16830EF72BC588130023C1EB /* Presentation */,
+				16830EF92BC588130023C1EB /* Shared */,
+			);
 			productName = MagicTheGathering;
 			productReference = 16830EDB2BC584440023C1EB /* MagicTheGathering.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +148,8 @@
 				Base,
 			);
 			mainGroup = 16830ED22BC584440023C1EB;
+			packageReferences = (
+			);
 			productRefGroup = 16830EDC2BC584440023C1EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,7 +176,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16830EE12BC584440023C1EB /* ContentView.swift in Sources */,
 				16830EDF2BC584440023C1EB /* MagicTheGatheringApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,11 +313,13 @@
 				DEVELOPMENT_TEAM = 5MRQMG4R3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MagicTheGathering/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,11 +344,13 @@
 				DEVELOPMENT_TEAM = 5MRQMG4R3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MagicTheGathering/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		16830EF32BC588130023C1EB /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		16830EF52BC588130023C1EB /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		16830EF72BC588130023C1EB /* Presentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Presentation;
+		};
+		16830EF92BC588130023C1EB /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shared;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16830ED32BC584440023C1EB /* Project object */;
 }
