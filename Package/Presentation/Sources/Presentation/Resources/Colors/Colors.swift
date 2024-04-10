@@ -15,6 +15,7 @@ public enum Colors {
     case blue
     case gray
     case lightGray
+    case white
     case custom(hex: UInt, alpha: Double?)
     
     var colorValue: Color {
@@ -36,6 +37,9 @@ public enum Colors {
             
         case .lightGray:
             return Color("light-gray", bundle: .module)
+            
+        case .white:
+            return Color("white", bundle: .module)
             
         case .custom(let hex, let alpha):
             return Color(hex: hex, alpha: alpha ?? 1.0)

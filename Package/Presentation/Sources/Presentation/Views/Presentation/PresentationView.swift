@@ -49,7 +49,7 @@ public struct PresentationView: View {
                 VStack {
                     CustomButtonView(action: {
                         isSheetPresented.toggle()
-                    }, text: "Continue", fontSize: 16, background: Color.white, borderColor: Color(named: .blue))
+                    }, text: "Continue", fontSize: 16, background: Color(named: .white), borderColor: Color(named: .blue))
                 }
                 .padding(.top, 20)
             }
